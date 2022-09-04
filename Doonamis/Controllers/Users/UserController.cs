@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Doonamis.Controllers.Users
 {
-    [Authorize]
     public class UserController : ControllerBase
     {
         private readonly ILogger<UserController> logger;
