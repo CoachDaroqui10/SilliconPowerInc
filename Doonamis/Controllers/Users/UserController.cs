@@ -2,6 +2,7 @@
 using Doonamis.Controllers.Users.Response;
 using DoonamisSPI.Controllers.Activities;
 using DoonamisSPI.Controllers.Activities.Responses;
+using DoonamisSPI.Data.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -45,7 +46,13 @@ namespace Doonamis.Controllers.Users
         [HttpGet("users/{id}/activities")]
         public async Task<IActionResult> GetBookedActivitiesByUser([FromRoute] int id)
         {
-            return Ok(new GetBookedActivitiesByUserResponse());
+            return Ok(new GetBookedActivitiesByUserResponse()
+            {
+                Activities = new List<Activity>()
+                {
+                    new Activity()
+                }
+            });
         }
     }
 }

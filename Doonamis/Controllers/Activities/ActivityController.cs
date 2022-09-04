@@ -3,6 +3,7 @@ using Doonamis.Controllers.Activities.Request;
 using DoonamisSPI.Controllers.Activities.Responses;
 using DoonamisSPI.Controllers.Authentication;
 using DoonamisSPI.Controllers.Authentication.Requests;
+using DoonamisSPI.Data.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,7 +27,13 @@ namespace DoonamisSPI.Controllers.Activities
         [HttpGet("activities")]
         public async Task<IActionResult> GetActivities([FromQuery] string category, string distance)
         {
-            return Ok(new GetActivitiesResponse());
+            return Ok(new GetActivitiesResponse()
+            {
+                Activities = new List<Activity>()
+                {
+                    new Activity()
+                }
+            }) ;
         }
 
         /// <summary>
@@ -44,7 +51,7 @@ namespace DoonamisSPI.Controllers.Activities
         /// </summary>
         /// <returns></returns>
         [Authorize]
-        [HttpGet("activities/{id}/book")]
+        [HttpPost("activities/{id}/book")]
         public async Task<IActionResult> BookActivity([FromRoute] int id, [FromQuery] DateTime date)
         {
             return Ok();
