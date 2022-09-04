@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"firstName\": \"David\",\n  \"lastName\": \"Villa\",\n  \"email\": \"David@Villa.com\",\n  \"password\": \"campeon\",\n  \"confirmPassword\": \"campeon\"\n}",
+					"raw": "{\n  \"firstName\": \"David\",\n  \"lastName\": \"Albelda\",\n  \"email\": \"da@valenciacf.com\",\n  \"password\": \"campeon\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
