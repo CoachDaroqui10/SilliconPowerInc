@@ -26,7 +26,6 @@ namespace DoonamisTests.Services
             {
                 Email = "test@email.com",
                 Password = "Test123",
-                ConfirmPassword = "Test123",
                 FirstName = "Name",
                 LastName = "LastName"
             };
