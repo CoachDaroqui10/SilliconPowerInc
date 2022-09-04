@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "785ab760-0a93-42ac-9cd8-6dbe93e6901e",
+		"name": "DoonamisSPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"firstName\": \"David\",\n  \"lastName\": \"Villa\",\n  \"email\": \"David@Villa.com\",\n  \"password\": \"campeon\",\n  \"confirmPassword\": \"campeon\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://silliconpowerinc.azurewebsites.net/api/register",
+					"protocol": "https",
+					"host": [
+						"silliconpowerinc",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetActivityById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://silliconpowerinc.azurewebsites.net/api/activities/1",
+					"protocol": "https",
+					"host": [
+						"silliconpowerinc",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"activities",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetActivities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://silliconpowerinc.azurewebsites.net/api/activities?category=1&distance=19",
+					"protocol": "https",
+					"host": [
+						"silliconpowerinc",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"activities"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "1"
+						},
+						{
+							"key": "distance",
+							"value": "19"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
