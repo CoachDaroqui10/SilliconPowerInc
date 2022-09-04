@@ -32,7 +32,7 @@ namespace DoonamisSPI.Controllers.Activities
         /// </summary>
         /// <returns>Activity information</returns>
         [HttpGet("activities/{id}")]
-        public async Task<IActionResult> GetActivityById([FromRoute] Guid id)
+        public async Task<IActionResult> GetActivityById([FromRoute] int id)
         {
             return Ok(new GetActivityByIdResponse());
         }
@@ -43,7 +43,7 @@ namespace DoonamisSPI.Controllers.Activities
         /// <returns></returns>
         [Authorize]
         [HttpGet("activities/{id}/book")]
-        public async Task<IActionResult> BookActivity([FromRoute] Guid id, [FromQuery] DateTime date)
+        public async Task<IActionResult> BookActivity([FromRoute] int id, [FromQuery] DateTime date)
         {
             return Ok();
         }
@@ -54,7 +54,7 @@ namespace DoonamisSPI.Controllers.Activities
         /// <returns></returns>
         [Authorize]
         [HttpPut("activities/{id}/rank")]
-        public async Task<IActionResult> RankActivity([FromRoute] Guid id, RankRequest rank)
+        public async Task<IActionResult> RankActivity([FromRoute] int id, RankRequest rank)
         {
             return Ok();
         }
@@ -65,7 +65,7 @@ namespace DoonamisSPI.Controllers.Activities
         /// <returns></returns>
         [Authorize]
         [HttpPost("activities/{id}/comment")]
-        public async Task<IActionResult> CommentActivity([FromRoute] Guid id, CommentRequest comment)
+        public async Task<IActionResult> CommentActivity([FromRoute] int id, CommentRequest comment)
         {
             return Ok();
         }

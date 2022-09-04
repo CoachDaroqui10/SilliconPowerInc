@@ -3,7 +3,7 @@ namespace DoonamisSPI.Data.Entities
 {
     public class Activity
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string Category { get; set; }
@@ -11,6 +11,7 @@ namespace DoonamisSPI.Data.Entities
         public string Location { get; set; }
         public float Rank { get; set; }
         public IEnumerable<DateTime> Availability { get; set; }
+        public IEnumerable<string> Comments { get; set; }
     }
 }
 

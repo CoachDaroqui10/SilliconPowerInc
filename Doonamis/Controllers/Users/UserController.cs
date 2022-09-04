@@ -22,7 +22,7 @@ namespace Doonamis.Controllers.Users
         /// </summary>
         /// <returns>List of activities</returns>
         [HttpGet("users/{id}")]
-        public async Task<IActionResult> GetUser([FromRoute] Guid id)
+        public async Task<IActionResult> GetUser([FromRoute] int id)
         {
             return Ok(new GetUserResponse());
         }
@@ -32,7 +32,7 @@ namespace Doonamis.Controllers.Users
         /// </summary>
         /// <returns>List of activities</returns>
         [HttpPut("users/{id}")]
-        public async Task<IActionResult> UpdateUser([FromRoute] Guid id)
+        public async Task<IActionResult> UpdateUser([FromRoute] int id)
         {
             return Ok(new UpdateUserResponse());
         }
@@ -42,7 +42,7 @@ namespace Doonamis.Controllers.Users
         /// </summary>
         /// <returns>List of activities</returns>
         [HttpGet("users/{id}/activities")]
-        public async Task<IActionResult> GetBookedActivitiesByUser([FromRoute] Guid id)
+        public async Task<IActionResult> GetBookedActivitiesByUser([FromRoute] int id)
         {
             return Ok(new GetBookedActivitiesByUserResponse());
         }
