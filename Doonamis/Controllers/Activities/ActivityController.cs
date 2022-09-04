@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DoonamisSPI.Controllers.Activities
 {
+    [ApiController]
+    [Route("api")]
     public class ActivityController : ControllerBase
     {
         private readonly ILogger<ActivityController> logger;

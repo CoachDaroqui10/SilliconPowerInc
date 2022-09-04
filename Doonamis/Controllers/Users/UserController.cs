@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Doonamis.Controllers.Users
 {
+    [ApiController]
+    [Route("api")]
     public class UserController : ControllerBase
     {
         private readonly ILogger<UserController> logger;

@@ -12,8 +12,7 @@ using Doonamis.Services;
 
 namespace DoonamisSPI.Controllers.Authentication
 {
-    [ApiController]
-    [Route("[controller]")]
+    [Route("api")]
     public class AuthenticationController : ControllerBase
     {
         private readonly ILogger<AuthenticationController> logger;

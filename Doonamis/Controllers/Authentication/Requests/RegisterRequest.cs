@@ -16,10 +16,6 @@ namespace DoonamisSPI.Controllers.Authentication.Requests
 
         [Required]
         public string Password { get; set; }
-
-        [Required]
-        [Compare("Password")]
-        public string ConfirmPassword { get; set; }
     }
 }
 
